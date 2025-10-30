@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="icon" href="data:">
+<title>gmailto</title>
+</head><body>
+<h1>gmailto</h1>
+
+<input type=text id=in_to placeholder="to"><br>
+<input type=text id=in_cc placeholder="cc"><br>
+<input type=text id=in_bcc placeholder="bcc"><br>
+<input type=text id=in_subject placeholder="subject"><br>
+<textarea id=ta_body placeholder="body">
+</textarea>
+<hr>
+<a id=a_link target=_blank>gmailto link</a>
+<hr>
+<a href=https://github.com/code4fukui/gmailto>src on GitHub</a><br>
+
+<script type="module">
+const set = () => {
+  const e = (c) => encodeURIComponent(c.value);
+  const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${e(in_to)}&cc=${e(in_cc)}&bcc=${e(in_bcc)}&su=${e(in_subject)}&body=${e(ta_body)}`;
+  a_link.href = url;
+};
+const comps = [in_to, in_cc, in_bcc, in_subject, ta_body];
+comps.forEach(c => c.onchange = () => set());
+set();
+</script>
+
+<style>
+body {
+  text-align: center;
+}
+input[type=text] {
+  width: 90vw;
+  margin: .3em;
+  padding: .2em;
+  font-size: 16px;
+}
+textarea {
+  width: 90vw;
+  height: calc(100vh - 2em * 5 - 18em);
+  margin: .3em;
+  padding: .2em;
+  font-size: 16px;
+}
+</style>
+
