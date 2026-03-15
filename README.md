@@ -1,5 +1,7 @@
 # gmailto
 
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
 A simple web page to create a mailto link for Gmail.
 
 ## Demo
