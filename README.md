@@ -18,4 +18,4 @@ A simple web page to create a mailto link for Gmail.
 3. The generated mailto link will be displayed, which you can click to open Gmail with the pre-filled details
 
 ## License
-MIT License
+MIT License — see [LICENSE](LICENSE).
